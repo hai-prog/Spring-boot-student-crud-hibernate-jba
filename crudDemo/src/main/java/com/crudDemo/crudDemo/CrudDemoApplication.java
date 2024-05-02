@@ -1,6 +1,6 @@
 package com.crudDemo.crudDemo;
 
-import com.crudDemo.crudDemo.doa.StudentDOA;
+import com.crudDemo.crudDemo.doa.StudentDAO;
 import com.crudDemo.crudDemo.entity.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,7 +20,7 @@ public class CrudDemoApplication {
 
 
     @Bean
-    public CommandLineRunner commandLineRunner(StudentDOA studentDAO) {
+    public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
 
             createStudent(studentDAO);
@@ -44,7 +44,7 @@ public class CrudDemoApplication {
         };
     }
 
-    private void deleteAllStudents(StudentDOA studentDAO) {
+    private void deleteAllStudents(StudentDAO studentDAO) {
 
         System.out.println("Deleting all student.... ");
 
@@ -53,7 +53,7 @@ public class CrudDemoApplication {
         System.out.println("The number of student that deleted is " + numOfStudentDeleted);
     }
 
-    private void deleteBasedOnCondition(StudentDOA studentDAO) {
+    private void deleteBasedOnCondition(StudentDAO studentDAO) {
 
         System.out.println("Deleting student that have last name OSAMA");
 
@@ -62,7 +62,7 @@ public class CrudDemoApplication {
         System.out.println("The number of student that deleted is " + numOfStudentDeleted);
     }
 
-    private void deleteStudent(StudentDOA studentDAO) {
+    private void deleteStudent(StudentDAO studentDAO) {
 
         // delete student
         int id = 3;
@@ -72,7 +72,7 @@ public class CrudDemoApplication {
         studentDAO.delete(id);
     }
 
-    private void updateStudent(StudentDOA studentDAO) {
+    private void updateStudent(StudentDAO studentDAO) {
 
         // retrieve student based on id
         int studentId = 1;
@@ -92,7 +92,7 @@ public class CrudDemoApplication {
         System.out.println("The updated student: " + tmpStudent);
     }
 
-    private void queryStudentByLastName(StudentDOA studentDAO) {
+    private void queryStudentByLastName(StudentDAO studentDAO) {
 
         // get list of student
         List<Student> students = studentDAO.findByLastName("Duck");
@@ -104,7 +104,7 @@ public class CrudDemoApplication {
         }
     }
 
-    private void queryForStudents(StudentDOA studentDAO) {
+    private void queryForStudents(StudentDAO studentDAO) {
 
         // get a list of student
         List<Student> students = studentDAO.findAll();
@@ -115,7 +115,7 @@ public class CrudDemoApplication {
         }
     }
 
-    private void readStudent(StudentDOA studentDAO) {
+    private void readStudent(StudentDAO studentDAO) {
 
         // create student object
         System.out.println("Creating new student object....");
@@ -136,7 +136,7 @@ public class CrudDemoApplication {
     }
 
 
-    private void createStudent(StudentDOA studentDAO) {
+    private void createStudent(StudentDAO studentDAO) {
         // create student object
         System.out.println("Creating new student object....");
         Student firstStudent = new Student("Haidy", "Osama", "haydy200@gmail.com");
@@ -150,7 +150,7 @@ public class CrudDemoApplication {
         System.out.println("Saved student: " + firstStudent);
     }
 
-    private void createMultipleStudents(StudentDOA studentDAO) {
+    private void createMultipleStudents(StudentDAO studentDAO) {
 
         // create multiple students
         System.out.println("Creating 3 student objects ...");

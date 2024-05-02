@@ -1,11 +1,10 @@
 package com.crudDemo.crudDemo.doa;
 
 import com.crudDemo.crudDemo.entity.Student;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface StudentDOA {
+public interface StudentDAO {
 
     void saveObject(Student student);
 
