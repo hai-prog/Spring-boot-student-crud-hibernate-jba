@@ -57,12 +57,14 @@ Follow these steps to set up and run the project locally:
 The application will run on http://localhost:8080. Use the following endpoints to interact with the API:
 
 HTTP Method	Endpoint	Description
-POST	/api/students	Add a new student
-GET	/api/students	Retrieve all students
-GET	/api/students/{id}	Retrieve a student by ID
-PUT	/api/students/{id}	Update a student by ID
-DELETE	/api/students/{id}	Delete a student by ID
-Test the API
+-  **POST	/api/students	Add a new student**
+-  **GET	/api/students	Retrieve all students**
+-  **GET	/api/students/{id}	Retrieve a student by ID**
+-  **PUT	/api/students/{id}	Update a student by ID**
+-  **DELETE	/api/students/{id}	Delete a student by ID**
+
+  
+**Test the API**
 
 7. **Use Postman or any API testing tool to test the endpoints.**
 
